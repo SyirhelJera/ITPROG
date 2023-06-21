@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combo Meal Assembler</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <h1>Combo Meal Assembler</h1>
+
+    <h2>Mains</h2>
+    <ul>
+        <li>Burger - ₱55 <input type="number" name="quantity[mains][1]" value="0" min="0"></li>
+        <li>Pizza - ₱120 <input type="number" name="quantity[mains][2]" value="0" min="0"></li>
+        <li>Sandwich - ₱60 <input type="number" name="quantity[mains][3]" value="0" min="0"></li>
+    </ul>
+
+    <h2>Sides</h2>
+    <ul>
+        <li>Fries - ₱60 <input type="number" name="quantity[sides][4]" value="0" min="0"></li>
+        <li>Salad - ₱50 <input type="number" name="quantity[sides][5]" value="0" min="0"></li>
+        <li>Onion Rings - ₱40 <input type="number" name="quantity[sides][6]" value="0" min="0"></li>
+    </ul>
+
+    <h2>Drinks</h2>
+    <ul>
+        <li>Coke - ₱65 <input type="number" name="quantity[drinks][7]" value="0" min="0"></li>
+        <li>Sprite - ₱65 <input type="number" name="quantity[drinks][8]" value="0" min="0"></li>
+        <li>Water - ₱65 <input type="number" name="quantity[drinks][9]" value="0" min="0"></li>
+    </ul>
+
+    <button onclick="redirectToCheckout()">Check-out</button>
+
+    <script>
+    function redirectToCheckout() {
+        var quantities = {};
+        var inputs = document.getElementsByTagName('input');
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].type === 'number') {
+                var name = inputs[i].name;
+                var value = parseInt(inputs[i].value);
+                quantities[name] = value;
+            }
+        }
+
+        // Store quantities in localStorage
+        localStorage.setItem('quantities', JSON.stringify(quantities));
+
+        // Redirect to checkout.html
+        window.location.href = "checkout.html";
+    }
+    </script>
+</body>
+</html>

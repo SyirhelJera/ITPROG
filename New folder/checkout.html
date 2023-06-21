@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checkout</h1>
+
+    <p>Selected Combo:</p>
+    <ul>
+        <li>Main: Burger</li>
+        <li>Side: Fries</li>
+        <li>Drink: Coke</li>
+    </ul>
+
+    <p>Total: ₱12</p>
+    <p>Discount: ₱2</p>
+    <p>Discounted Total: ₱10</p>
+
+    <form action="checkout.html" method="post">
+        <input type="hidden" name="total" value="12">
+        <input type="hidden" name="discount" value="2">
+        <label>Payment: ₱</label>
+        <input type="number" name="payment" step="0.01" min="0" required>
+        <input type="submit" value="Pay">
+    </form>
+</body>
+</html>
