@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Combo Meal Assembler</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+  <h1>Combo Meal Assembler</h1>
+  <h2>Select your items:</h2>
+  
+  <div id="menu">
+    <h3>Main:</h3>
+    <select id="main">
+      <option value="burger">Burger ($5.00)</option>
+      <option value="pizza">Pizza ($8.00)</option>
+      <option value="sandwich">Sandwich ($6.50)</option>
+    </select>
+  
+    <h3>Side:</h3>
+    <select id="side">
+      <option value="fries">French Fries ($2.50)</option>
+      <option value="salad">Salad ($3.00)</option>
+      <option value="onionRings">Onion Rings ($2.00)</option>
+    </select>
+  
+    <h3>Drink:</h3>
+    <select id="drink">
+      <option value="coke">Coke ($1.50)</option>
+      <option value="pepsi">Pepsi ($1.50)</option>
+      <option value="sprite">Sprite ($1.50)</option>
+    </select>
+  
+    <h3>Quantity:</h3>
+    <input type="number" id="quantity" value="1" min="1">
+  
+    <button onclick="addToCart()">Add to Cart</button>
+    <button onclick="cancelTransaction()">Cancel Transaction</button>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
