@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combo Meal Assembler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Combo Meal Assembler</h1>
+
+  <div id="main-selection">
+    <h2>Main:</h2>
+    <select id="main-select">
+      <option value="">Select a main</option>
+      <option value="Burger">Burger</option>
+      <option value="Pizza">Pizza</option>
+      <option value="Pasta">Pasta</option>
+    </select>
+    <input type="number" id="main-quantity" placeholder="Quantity" min="1">
+  </div>
+
+  <div id="side-selection">
+    <h2>Side:</h2>
+    <select id="side-select">
+      <option value="">Select a side</option>
+      <option value="Fries">Fries</option>
+      <option value="Salad">Salad</option>
+      <option value="Onion Rings">Onion Rings</option>
+    </select>
+    <input type="number" id="side-quantity" placeholder="Quantity" min="1">
+  </div>
+
+  <div id="drink-selection">
+    <h2>Drink:</h2>
+    <select id="drink-select">
+      <option value="">Select a drink</option>
+      <option value="Coke">Coke</option>
+      <option value="Pepsi">Pepsi</option>
+      <option value="Sprite">Sprite</option>
+    </select>
+    <input type="number" id="drink-quantity" placeholder="Quantity" min="1">
+  </div>
+
+  <button id="cancel-btn">Cancel Transaction</button>
+  <button id="checkout-btn">Checkout</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

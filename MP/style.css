@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  #main-selection,
+  #side-selection,
+  #drink-selection {
+    margin-bottom: 20px;
+  }
+  
+  #cancel-btn,
+  #checkout-btn,
+  #pay-btn {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  #order-summary {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #payment-amount {
+    margin-top: 10px;
+  }
+  
+  #order-list,
+  #total,
+  #discount,
+  #discounted-total,
+  #change {
+    font-weight: bold;
+  }
+  
+  #order-list li {
+    margin-bottom: 5px;
+  }
+  
